@@ -1,0 +1,6 @@
+{
+  "name": "Axis Bank: Ambient-Credit 2035",
+  "description": "Autonomous multi-agent continuous commercial credit underwriting platform for Axis Bank Commercial Banking Group & MSMEs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

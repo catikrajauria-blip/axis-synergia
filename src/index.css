@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --axis-burgundy: #97124B;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #F3F4F6;
+  color: #1F2937;
+}
+
+.bg-axis {
+  background-color: var(--axis-burgundy);
+}
+
+.text-axis {
+  color: var(--axis-burgundy);
+}
+
+.border-axis {
+  border-color: var(--axis-burgundy);
+}
+
+.metric-card {
+  background: white;
+  border-left: 4px solid var(--axis-burgundy);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(229, 231, 235, 1);
+}
