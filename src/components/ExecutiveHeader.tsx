@@ -10,7 +10,8 @@ import {
   Activity,
   Sparkles,
   RefreshCw,
-  SlidersHorizontal
+  SlidersHorizontal,
+  BookOpen
 } from 'lucide-react';
 
 interface ExecutiveHeaderProps {
@@ -22,6 +23,7 @@ interface ExecutiveHeaderProps {
   onToggleAutoEngine: () => void;
   onOpenSchemaModal: () => void;
   onOpenAnalyticsModal: () => void;
+  onOpenGlossaryModal: () => void;
   onTriggerTelemetrySpike: () => void;
   riskAppetite: 'Balanced' | 'Growth' | 'Prudent';
   onChangeRiskAppetite: (val: 'Balanced' | 'Growth' | 'Prudent') => void;
@@ -36,6 +38,7 @@ export const ExecutiveHeader: React.FC<ExecutiveHeaderProps> = ({
   onToggleAutoEngine,
   onOpenSchemaModal,
   onOpenAnalyticsModal,
+  onOpenGlossaryModal,
   onTriggerTelemetrySpike,
   riskAppetite,
   onChangeRiskAppetite
@@ -146,10 +149,18 @@ export const ExecutiveHeader: React.FC<ExecutiveHeaderProps> = ({
 
             <button
               onClick={onOpenAnalyticsModal}
-              className="flex items-center gap-1.5 bg-[#97124B] hover:bg-[#7A0C3C] text-white px-3.5 py-1.5 rounded-lg text-xs font-bold transition-colors shadow-sm"
+              className="flex items-center gap-1.5 bg-[#97124B] hover:bg-[#7A0C3C] text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-colors shadow-sm"
             >
               <BarChart3 className="w-3.5 h-3.5" />
               <span>Portfolio Analytics</span>
+            </button>
+
+            <button
+              onClick={onOpenGlossaryModal}
+              className="flex items-center gap-1.5 bg-amber-400 hover:bg-amber-300 text-slate-950 px-3.5 py-1.5 rounded-lg text-xs font-extrabold transition-all shadow-sm ring-2 ring-amber-300/50 active:scale-95"
+            >
+              <BookOpen className="w-3.5 h-3.5 text-slate-950" />
+              <span>Terms & Demo Guide</span>
             </button>
           </div>
         </div>

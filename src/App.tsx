@@ -11,6 +11,7 @@ import { AIDecisionCard } from './components/AIDecisionCard';
 import { ACOApprovalQueue } from './components/ACOApprovalQueue';
 import { SystemInstructionsInspectorModal } from './components/SystemInstructionsInspectorModal';
 import { PortfolioAnalytics } from './components/PortfolioAnalytics';
+import { FinancialGlossaryModal } from './components/FinancialGlossaryModal';
 
 import { 
   CreditEvaluationRequest, 
@@ -51,6 +52,7 @@ export default function App() {
   // Modals
   const [isSchemaModalOpen, setIsSchemaModalOpen] = useState(false);
   const [isAnalyticsModalOpen, setIsAnalyticsModalOpen] = useState(false);
+  const [isGlossaryModalOpen, setIsGlossaryModalOpen] = useState(false);
 
   // Simulated continuous tele-ingestion stream ticker
   useEffect(() => {
@@ -249,6 +251,7 @@ export default function App() {
         onToggleAutoEngine={() => setAutoEngineActive(!autoEngineActive)}
         onOpenSchemaModal={() => setIsSchemaModalOpen(true)}
         onOpenAnalyticsModal={() => setIsAnalyticsModalOpen(true)}
+        onOpenGlossaryModal={() => setIsGlossaryModalOpen(true)}
         onTriggerTelemetrySpike={handleTriggerTelemetrySpike}
         riskAppetite={riskAppetite}
         onChangeRiskAppetite={(val) => setRiskAppetite(val)}
@@ -320,6 +323,11 @@ export default function App() {
       <PortfolioAnalytics
         isOpen={isAnalyticsModalOpen}
         onClose={() => setIsAnalyticsModalOpen(false)}
+      />
+
+      <FinancialGlossaryModal
+        isOpen={isGlossaryModalOpen}
+        onClose={() => setIsGlossaryModalOpen(false)}
       />
     </div>
   );
